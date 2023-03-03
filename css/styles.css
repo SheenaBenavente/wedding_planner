@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* include padding and border in element's total width and height */
+  }
+
+.header_banner {
+    position: absolute;
+    width: 100%;
+    min-height: 60px;
+    left: 0;
+    z-index: -2;
+    background-color: #4D5765;
+    padding: 15px;
+    border: solid 1px red;
+}
+
+.header_text {
+    color: #ffff;
+}
+
+.banner_container {
+    position: absolute;
+    margin-top: 20px;
+    border: solid 1px red;
+}
+
+.container {
+    max-width: 1220px;
+    margin:auto;
+    border: solid 1px red;
+}
+
+.header_welcome {
+    color: #ffff;
+}
+
+.button {
+    text-transform: none;
+}
+
+.button_icon: {
+    font-family: Font Awesome\ 6 Pro;
+    font-weight: 400;
+}
+
+.button_icon {
+    position:relative;
+    border: solid 1px #4D5765;
+    max-width: 56px;
+    max-height: 56px;
+    margin-left: 10px;
+    padding: 20px;
+    background-color: #010F1C;
+}
+
+.header_btn {
+    color: #ffff;
+    min-width: 18px;
+    min-height: 18px;
+    margin: auto;
+}
+
+#lblCartCount {
+    font-size: 12px;
+    background: #DFB68D;
+    color: #010F1C;
+    padding: 0 3px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    position:absolute;
+    top: 10px;
+    right: 10px;
+}
+
+p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.header_contact_label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 5px;
+    color: #ffff;
+}
+
+.header_info {
+    margin: 0px;
+    color: #ffff;
+
+}
+
+.header_logo {
+    margin-top: 70px;
+}
+
+.header_contact_icon {
+    border: solid 1px red;
+}
+
+.fa-location-dot, .fa-envelope, .fa-phone{
+    font-size: 40px;
+    color: #dfb68d;
+}
+
+.flex {
+    display: flex;
+}
+
+.header_contact {
+    align-items: center;
+    gap: 20px;
+    border: solid 1px blue;
+}
+
+.header_contact_wrap {
+    gap: 37px;
+}
+
+.top_menu {
+    gap: 66px;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 15px;
+    padding-top: 25px;
+    position: relative;
+    border: solid 1px blue;
+
+}
+
+.btn_dark {
+    min-width: 122px;
+    min-height: 56px;
+    background-color: #010F1C;
+    color: #ffff;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    border: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.nav_list {
+
+    gap: 20px;
+}
+
+.nav_list a {
+    border: solid 1px blue;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #ffff;
+    text-decoration: none;
+}
+
+.menu_item::after {
+    content: "\f078";
+    font-family: Font Awesome\ 6 Pro;
+    font-size: 14px;
+    margin-left: 5px;
+    color: #ffff;
+}
+
+.bottom_menu {
+    gap: 96px;
+    margin-top: 9px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu {
+    flex-direction: column;
+}
+
+.header_menu {
+    justify-content: space-between;
+}
+
+.header_shape {
+    position: absolute;
+    right: 0;
+    width: 68%;
+    background-color: #010F1C;
+    clip-path: polygon(60px 0, 100% 0, 100% 100%, 52px 100%, 0 calc(100% - 70px));
+    z-index: -1;
+}
+
+.bg_top {
+    height: 100px;
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+.bg_bottom {
+    height: 70px;
+    background-color: #DFB68D;
+}
