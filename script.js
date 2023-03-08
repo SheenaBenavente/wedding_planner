@@ -1,5 +1,5 @@
 
-const headerMenu = document.querySelector('#desktop__nav');
+const desktopNav = document.querySelector('#desktop__nav');
 
 
 
