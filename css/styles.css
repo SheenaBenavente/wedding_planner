@@ -6,6 +6,7 @@
     -webkit-box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .header_banner {
@@ -105,7 +106,6 @@ p {
 
 a{
     text-decoration: none;
-    color: #ffff;
 }
 
 .header_contact_label {
@@ -194,9 +194,10 @@ ul {
     line-height: 26px;
     text-transform: uppercase;
     text-decoration: none;
+    position: relative;
 }
 
-.menu_item::after {
+.nav_list .menu_item::after {
     content: "\f078";
     font-family: Font Awesome\ 6 Pro;
     font-size: 14px;
@@ -204,8 +205,14 @@ ul {
     color: #ffff;
 }
 
-.menu_item:hover {
+.nav_list li a {
+    transition: color .6s;
+}
+
+
+.menu_item a:hover {
     color: #010F1C;
+
 }
 
 .bottom_menu {
@@ -276,6 +283,7 @@ ul {
 
 .post_meta a {
     transition: color .6s;
+    color: #ffff;
 }
 
 .blog_post_details {
@@ -358,7 +366,6 @@ ul {
     margin-bottom: 23px;
 }
 
-
 footer {
     background-image: url(../img/homepage/footer_bg_1.png);
     background-color: #010F1C;
@@ -386,6 +393,7 @@ footer {
     font-size: 16px;
     font-weight: 400px;
     font-family: poppins;
+    color: white;
 }
 
 .footer_widget_icon {
@@ -440,25 +448,64 @@ footer {
     transition: background-color .6s;
 }
 
-.menu_item {
+.submenu {
+    position: absolute;
+    top: 50px;
+    /*top: 20px;*/
+    /* left: -10000px; */
+    /* display: none; */
+    opacity: 0;
+    transition: .5s;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.submenu ul li {
+    padding: 0px 9px 0px 9px;
     position: relative;
 }
 
-.submenu_item {
-    position: absolute;
-    top: 22px;
-    /* left: -10000px; */
-    background: red;
-    display: none;
-    /* opacity: 0; */
-    /* transition: opacity .5s; */
+.submenu li a {
+    position: relative;
+    white-space: nowrap;
+    padding: 23px;    
+    color:#010F1C;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    font-style: normal;
 }
 
-.menu_item:hover .submenu_item {
+.submenu li {
+    background: #ffff;
+    padding: 18px;
+}
+
+.submenu li::before {
+    content: "\f81b";
+    font-family: Font Awesome\ 6 Pro;
+    position: absolute;
+    float: left;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 500;
+    color: #DFB68D;
+}
+
+.submenu li::after {
+    content: "\f105";
+    font-family: Font Awesome\ 6 Pro;
+    color: #010F1C;
+}
+
+.nav_list:hover .submenu {
     display: block;
-    transform: scale(1);
-    /* left: 0; */
-    /* opacity: 1; */
+    opacity: 1;
+    transform: scaleY(1);
 }
 
 .social_icon:hover {
