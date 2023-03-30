@@ -197,22 +197,34 @@ ul {
     position: relative;
 }
 
-.nav_list .menu_item::after {
+.nav_list li:hover a {
+    color: #010F1C;
+    transition: color .6s;
+}
+
+.nav_list li::after {
     content: "\f078";
     font-family: Font Awesome\ 6 Pro;
     font-size: 14px;
     margin-left: 5px;
     color: #ffff;
-}
-
-.nav_list li a {
     transition: color .6s;
 }
 
+.nav_list li:hover::after {
+    color: #010F1C;
+}
+
+.desktop_nav ul li a {
+    transition: .6s;
+}
+
+.menu_item a {
+    color: #ffff;
+}
 
 .menu_item a:hover {
     color: #010F1C;
-
 }
 
 .bottom_menu {
@@ -458,8 +470,15 @@ footer {
     transition: .5s;
     transform: scaleY(0);
     transform-origin: top;
+    padding: 18px 20px 18px 18px;
+    background: #ffff;
 }
 
+.submenu li:hover a{
+    transition: color 0.5s ease;
+    color: #DFB68D;
+}
+  
 .submenu ul li {
     padding: 0px 9px 0px 9px;
     position: relative;
@@ -468,18 +487,13 @@ footer {
 .submenu li a {
     position: relative;
     white-space: nowrap;
-    padding: 23px;    
+    padding: 10px 23px 10px 23px;    
     color:#010F1C;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 20px;
     font-weight: 500;
     font-family: 'Poppins';
     font-style: normal;
-}
-
-.submenu li {
-    background: #ffff;
-    padding: 18px;
 }
 
 .submenu li::before {
@@ -491,15 +505,21 @@ footer {
     height: 11px;
     border-radius: 50%;
     display: inline-block;
-    line-height: 1;
+    line-height: -2;
     font-weight: 500;
     color: #DFB68D;
+    transition: all 0.6s ease;
 }
 
 .submenu li::after {
     content: "\f105";
     font-family: Font Awesome\ 6 Pro;
     color: #010F1C;
+    transition: color 0.6s ease;
+}
+
+.submenu li:hover::after {
+    color: #DFB68D;
 }
 
 .nav_list:hover .submenu {
@@ -507,6 +527,15 @@ footer {
     opacity: 1;
     transform: scaleY(1);
 }
+
+.nav_list .menu_item .submenu li .submenu {
+    border: 1px solid aqua;
+    left: 100%;
+    right: auto;
+    top: 0;
+    margin: 0 0;
+}
+
 
 .social_icon:hover {
     background-color: #dfb68d;
