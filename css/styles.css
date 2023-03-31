@@ -43,11 +43,6 @@
 }
 
 .button_icon {
-    font-family: Font Awesome\ 6 Pro;
-    font-weight: 400;
-}
-
-.button_icon {
     position:relative;
     border: solid 1px #4D5765;
     max-width: 56px;
@@ -55,6 +50,9 @@
     margin-left: 10px;
     padding: 20px;
     background-color: transparent;
+    font-family: Font Awesome\ 6 Pro;
+    font-weight: 400;
+    transition: background-color .6s;
 }
 
 .header_btn {
@@ -64,12 +62,17 @@
     margin: auto;
 }
 
+.button_icon:hover {
+    background-color: #DFB68D;
+}
+
 #lblCartCount {
     font-size: 12px;
     background: #DFB68D;
     color: #ffff;
     vertical-align: top;
     margin-left: 10px;
+    transition: background-color .6s;
 }
 
 .badge {
@@ -81,6 +84,11 @@
     position: absolute;
     top: 6px;
     right: 8px;
+}
+
+.header_buttons .button_icon:hover #lblCartCount {
+    background-color: #ffff;
+    color: #DFB68D;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -127,11 +135,6 @@ a{
     margin-top: 70px;
 }
 
-.header_contact_icon {
-    border: solid 1px red;
-}
-
-
 .flex {
     display: flex;
 }
@@ -139,7 +142,6 @@ a{
 .header_contact_icon {
     align-items: center;
     gap: 20px;
-    border: solid 1px blue;
     color: #dfb68d;
     font-size: 40px;
     margin-right: 20px;
@@ -156,7 +158,6 @@ a{
     padding-bottom: 15px;
     padding-top: 25px;
     position: relative;
-    border: solid 1px blue;
 }
 
 .btn_dark {
@@ -186,7 +187,6 @@ ul {
 }
 
 .menu_item {
-    border: solid 1px rgb(0, 255, 8);
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -206,7 +206,6 @@ ul {
     content: "\f078";
     font-family: Font Awesome\ 6 Pro;
     font-size: 14px;
-    margin-left: 5px;
     color: #ffff;
     transition: color .6s;
 }
@@ -269,7 +268,6 @@ ul {
     line-height: 26px;
     text-decoration: none;
     color: #ffff;
-    /* border: solid 1px rgb(216, 21, 67); */
     text-decoration: none;
     margin-top: -6px;
     transition: .6s;
@@ -464,7 +462,7 @@ footer {
     position: absolute;
     top: 50px;
     /*top: 20px;*/
-    /* left: -10000px; */
+    left: -22px;
     /* display: none; */
     opacity: 0;
     transition: .5s;
@@ -533,7 +531,6 @@ footer {
 
 
 .nav_list .menu_item .submenu li .submenu {
-    border: 1px solid aqua;
     left: 112%;
     right: auto;
     top: 0;
