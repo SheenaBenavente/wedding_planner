@@ -185,7 +185,7 @@ ul {
     list-style: none;
 }
 
-.menu_item {
+.menu_item, .menu_item_has_children {
     border: solid 1px rgb(0, 255, 8);
     font-family: 'Poppins';
     font-style: normal;
@@ -202,7 +202,7 @@ ul {
     transition: color .6s;
 }
 
-.nav_list li::after {
+.menu_item_has_children a::after {
     content: "\f078";
     font-family: Font Awesome\ 6 Pro;
     font-size: 14px;
@@ -474,12 +474,12 @@ footer {
     background: #ffff;
 }
 
-.submenu li:hover a{
+.submenu li:hover > a {
     transition: color 0.5s ease;
     color: #DFB68D;
 }
   
-.submenu ul li {
+.menu_item_has_children, .submenu li {
     padding: 0px 9px 0px 9px;
     position: relative;
 }
@@ -516,24 +516,28 @@ footer {
     font-family: Font Awesome\ 6 Pro;
     color: #010F1C;
     transition: color 0.6s ease;
+    right: 0;
+    position: absolute;
 }
 
 .submenu li:hover::after {
     color: #DFB68D;
 }
 
-.nav_list:hover .submenu {
+
+.desktop_nav ul li:hover > ul.submenu {
     display: block;
     opacity: 1;
     transform: scaleY(1);
 }
 
+
 .nav_list .menu_item .submenu li .submenu {
     border: 1px solid aqua;
-    left: 100%;
+    left: 112%;
     right: auto;
     top: 0;
-    margin: 0 0;
+    margin-top: 20px;
 }
 
 
